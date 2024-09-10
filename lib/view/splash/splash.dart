@@ -13,6 +13,7 @@ class Splash extends StatelessWidget {
       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Signup()));
     });
     return Scaffold(
+      backgroundColor: Colors.blue,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,8 @@
 
+import 'package:e_commerce_app/controller/cart_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:pdf/widgets.dart' as pdfWidgets;
 import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
@@ -7,11 +10,12 @@ import 'package:printing/printing.dart';
 
 class Orderdone extends StatelessWidget {
 
-  Orderdone();
+
 
   @override
   Widget build(BuildContext context) {
-
+var controller =Get.put(CartController());
+var productlist=controller.list.where((e)=>e['title']).toList();
     var size = MediaQuery.sizeOf(context);
     return Scaffold(
      backgroundColor: Colors.blueGrey,
@@ -66,11 +70,9 @@ class Orderdone extends StatelessWidget {
                         pdfWidgets.Page(
                           build: (pdfContext) => pdfWidgets.Column(
                             children: [
-                              pdfWidgets.Text('Product Name(s)'),pdfWidgets.Text('name quantity'
-                              ,
-                              ),
+                              pdfWidgets.Text('Products :-'),
                               pdfWidgets.Text(
-                                'Total Price: \$price}',
+                                '''$productlist'''
                               ),
                               pdfWidgets.Text(
                                 'Thank you for shopping with us!',

@@ -29,6 +29,7 @@ var i=0;
   void initState() {
   i=random.nextInt(20);
     item= products[i];
+    item['price']=0;
     // TODO: implement initState
     super.initState();
   }

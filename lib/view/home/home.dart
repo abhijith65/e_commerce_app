@@ -16,7 +16,7 @@ var controller =Get.put(CartController());
     //final cartProvider = Provider.of<CartProvider>(context);
 
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         centerTitle: true,
        // backgroundColor: ColorTheme.backgroundclr,

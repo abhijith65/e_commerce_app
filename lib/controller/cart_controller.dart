@@ -6,11 +6,11 @@ import 'package:get/get.dart';
 class CartController extends GetxController {
 
   var list=[].obs;
-
   // obs means this integer value is observable
 
   void add1( value) {
     list.add(value);
+
   }
 
   void remove1(value) {

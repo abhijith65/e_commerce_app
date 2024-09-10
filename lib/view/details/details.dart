@@ -20,7 +20,8 @@ class Details extends StatelessWidget {
   //  final cartProvider = Provider.of<CartProvider>(context);
 
     return Scaffold(
-      //backgroundColor: ColorTheme.backgroundclr,
+      backgroundColor: Colors.blue,
+
       appBar: AppBar(
         centerTitle: true,
         leading: IconButton(

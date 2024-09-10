@@ -9,21 +9,27 @@ var otpnum='0435';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text('Verify your OTP',style: TextStyle(fontSize: 30),),
-          TextField(
-            controller: controller,
-            decoration: InputDecoration(
-              hintText: 'enter otp'
-            ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(28.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Verify your OTP',style: TextStyle(fontSize: 30),),
+              TextField(
+                controller: controller,
+                decoration: InputDecoration(
+                  hintText: 'enter otp'
+                ),
+              ),
+              ElevatedButton(onPressed: (){
+                if(controller.text==otpnum){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Scratchcard()));
+                }
+              }, child: Text('verify'))
+            ],
           ),
-          ElevatedButton(onPressed: (){
-            if(controller.text==otpnum){
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Scratchcard()));
-            }
-          }, child: Text('verify'))
-        ],
+        ),
       ),
     );
   }

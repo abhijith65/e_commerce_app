@@ -15,12 +15,10 @@ class Cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
-   // final cartProvider = Provider.of<CartProvider>(context);
-    //final cartProducts = cartProvider.cart;
-    //final totalPrice = cartProvider.totalPrice;
+
 
     return Scaffold(
-     // backgroundColor: ColorTheme.backgroundclr,
+     backgroundColor: Colors.blue,
       appBar: AppBar(
         centerTitle: true,
         leading: IconButton(
@@ -49,8 +47,8 @@ class Cart extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               itemCount: controller.list.length,
               itemBuilder: (context, index) {
-               // final productl = products.where((e)=>e['id']==controller.list[index]);
-                //var product=productl.toList();
+
+
                 return Card(
                   margin: const EdgeInsets.symmetric(vertical: 8.0),
                   elevation: 4,
@@ -89,12 +87,12 @@ class Cart extends StatelessWidget {
                           ),
                         ),
                         IconButton(
-                          icon: Icon(Icons.remove_shopping_cart,
+                          icon: Icon(Icons.delete_outline,
                               //color: ColorTheme.black
                             ),
                           onPressed: () {
                             controller.remove1(controller.list[index]);
-                           // cartProvider.removeProduct(product);
+
                           },
                         ),
                       ],
@@ -111,17 +109,7 @@ class Cart extends StatelessWidget {
                 SizedBox(
                   width: size.width * 0.1,
                 ),
-                MaterialButton(
-                  onPressed: () {},
-                  //color: ColorTheme.text,
-                  child: Text(
-                    'TOTAL: ₹',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                     // color: ColorTheme.black,
-                    ),
-                  ),
-                ),
+
                 SizedBox(
                   width: size.width * 0.15,
                 ),
