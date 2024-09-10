@@ -40,7 +40,7 @@ var i=0;
         child: Container(
 
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
+
             boxShadow: [
               BoxShadow(
                 color: Colors.redAccent,
@@ -58,7 +58,7 @@ var i=0;
                 Scratcher(
                   brushSize: 50,
                   threshold: 50,
-                 // color: ColorTheme.backgroundclr,
+                  color: Colors.blueGrey,
                  //  onThreshold: () {
                  //    i=random.nextInt(20);
                  //     item= products[i];
@@ -66,9 +66,7 @@ var i=0;
                   child: Container(
                     height: 200, // Adjust the height as needed
                     width: 200,  // Adjust the width as needed
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15)
-                    ),
+
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -85,8 +83,8 @@ var i=0;
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Scratch to reveal your prize!',
-                          style: TextStyle(fontSize: 14, color: Colors.grey),
+                          '${item['title']}',
+                          style: TextStyle(fontSize: 14, ),
                         ),
                       ],
                     ),
