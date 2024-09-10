@@ -23,10 +23,10 @@ class Login extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'welcome', //style: GoogleFonts.sahitya(fontSize: 40),
+              'welcome',style: TextStyle(fontSize: 40),
             ),
             Text(
-              'login to your account', // style: GoogleFonts.sahitya(fontSize: 40)
+              'login to your account',
             ),
             SizedBox(
               height: 10,

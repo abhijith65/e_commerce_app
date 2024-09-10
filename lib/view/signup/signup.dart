@@ -15,7 +15,7 @@ class Signup extends StatefulWidget {
 class _SignupState extends State<Signup> {
   var pwdvisible = true;
   var formkey = GlobalKey<FormState>();
-
+  var otpnum='0435';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,10 +38,11 @@ class _SignupState extends State<Signup> {
                   height: 50,
                 ),
                 Text(
-                  'welcome', // style: GoogleFonts.sahitya(fontSize: 40)
+                  'welcome',style: TextStyle(fontSize: 40),
                 ),
+                SizedBox(height: 10,),
                 Text(
-                  'create your account', //style: GoogleFonts.sahitya(fontSize: 40),
+                  'create your account',
                 ),
                 SizedBox(
                   height: 10,
@@ -123,10 +124,11 @@ class _SignupState extends State<Signup> {
                       labelText: 'confirm password',
                       hintText: 'reenter password'),
                 ),
+                SizedBox(height: 10,),
                 RichText(
                     text: TextSpan(
                         text: 'already a user, ',
-                        style: TextStyle(color: Colors.white12),
+                        style: TextStyle(color: Colors.grey),
                         children: [
                       TextSpan(
                           text: 'LogIn',
@@ -137,7 +139,7 @@ class _SignupState extends State<Signup> {
                             },
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Colors.white12))
+                              color: Colors.black54))
                     ])),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.1,
@@ -146,6 +148,7 @@ class _SignupState extends State<Signup> {
                   onPressed: () {
                     var valid = formkey.currentState!.validate();
                     if (valid == true) {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('your otp is $otpnum')));
                       Navigator.push(
                           context,
                           MaterialPageRoute(

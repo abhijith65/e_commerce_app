@@ -97,6 +97,7 @@ class _BuynowState extends State<Buynow> {
                 ),
               ),
             ),
+            SizedBox(height: 30),
           ],
         ),
       ),

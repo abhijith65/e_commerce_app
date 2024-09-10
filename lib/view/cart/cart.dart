@@ -114,7 +114,7 @@ class Cart extends StatelessWidget {
                   width: size.width * 0.15,
                 ),
                 MaterialButton(
-                  //color: ColorTheme.text,
+                  color: Colors.greenAccent,
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -127,9 +127,12 @@ class Cart extends StatelessWidget {
                     'CHECK OUT',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        //color: ColorTheme.black,
+
                         fontSize: 16),
                   ),
+                ),
+                SizedBox(
+                  height: size.height * 0.2,
                 ),
               ],
             ),

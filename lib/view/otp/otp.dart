@@ -22,6 +22,7 @@ var otpnum='0435';
                   hintText: 'enter otp'
                 ),
               ),
+              SizedBox(height: 20,),
               ElevatedButton(onPressed: (){
                 if(controller.text==otpnum){
                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Scratchcard()));

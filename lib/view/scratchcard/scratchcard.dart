@@ -101,7 +101,7 @@ var i=0;
                     ),
                   ),
                   onPressed: () {controller.add1(item);
-                    Get.to(Cart()); },
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Cart())); },
                   child: Text(
                     'Add to Cart',
                     style: TextStyle(

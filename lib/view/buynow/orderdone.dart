@@ -15,7 +15,10 @@ class Orderdone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 var controller =Get.put(CartController());
-var productlist=controller.list.where((e)=>e['title']).toList();
+var plist=[];
+for(int i=0;i<controller.list.length;i++){
+  plist.add(controller.list[i]['title']);
+}
     var size = MediaQuery.sizeOf(context);
     return Scaffold(
      backgroundColor: Colors.blueGrey,
@@ -72,7 +75,7 @@ var productlist=controller.list.where((e)=>e['title']).toList();
                             children: [
                               pdfWidgets.Text('Products :-'),
                               pdfWidgets.Text(
-                                '''$productlist'''
+                                '''$plist'''
                               ),
                               pdfWidgets.Text(
                                 'Thank you for shopping with us!',
@@ -87,7 +90,7 @@ var productlist=controller.list.where((e)=>e['title']).toList();
                     },
                     child: Text(
                       'PRINT PDF',
-                      style: TextStyle(color: Colors.yellow),
+                      //style: TextStyle(color: Colors.yellow),
                     ),
                   ),
                 ),

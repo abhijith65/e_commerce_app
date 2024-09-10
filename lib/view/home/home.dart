@@ -19,7 +19,7 @@ var controller =Get.put(CartController());
       backgroundColor: Colors.blue,
       appBar: AppBar(
         centerTitle: true,
-       // backgroundColor: ColorTheme.backgroundclr,
+       leading: Icon(null),
         title: Text(
           'Shoppy',
          // style: GlTextStyles.robotoStyl(),
@@ -131,11 +131,8 @@ var controller =Get.put(CartController());
           style: TextStyle(color: Colors.white),
         )),
         child: Container(
-          child: IconButton(
-            icon: Icon(
-              Icons.shopping_cart,
-              // color: cartProvider.cart.isNotEmpty ? Colors.red : ColorTheme.text,
-            ),
+          child:FloatingActionButton(
+            child: Icon(Icons.shopping_cart_outlined,size: 50,),
             onPressed: () {
               Navigator.push(
                 context,
@@ -144,7 +141,7 @@ var controller =Get.put(CartController());
                 ),
               );
             },
-          ),
+          )
         ),
       ),
     );
